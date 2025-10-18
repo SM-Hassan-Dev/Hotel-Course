@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Hospitality Institute | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    /* Hero */
+    .hero {
+      background: url('images/hero-bg.jpg') center/cover no-repeat;
+      color: white;
+      position: relative;
+    }
+    .hero::after {content:"";position:absolute;inset:0;background:rgba(0,0,0,0.65);}
+    .hero .container {position:relative;z-index:1;}
+    .hero h1 { letter-spacing: 1px; }
+    .hero p { font-size: 1.2rem; }
+    
+    /* Navbar hover */
+    .navbar-nav .nav-link:hover { color: #ffc107 !important; }
+    .navbar-brand { letter-spacing: 1px; }
+
+    /* Section Headings */
+    .section-title {
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      position:relative;
+      display:inline-block;
+    }
+    .section-title::after {
+      content:"";
+      position:absolute;
+      width:60px;
+      height:3px;
+      background:#ffc107;
+      left:50%;
+      bottom:-10px;
+      transform:translateX(-50%);
+    }
+
+    /* Features */
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      padding: 35px;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(to right, #1c1f23, #343a40);
+      color: white;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+    }
+    footer h5 { color: #ffc107; }
+    footer a:hover { color: #ffc107 !important; }
+    footer .social a {
+      display:inline-block;
+      width:36px; height:36px;
+      border-radius:50%;
+      background:#222;
+      line-height:36px;
+      text-align:center;
+      transition:0.3s;
+    }
+    footer .social a:hover { background:#ffc107; color:#000; }
+
+    /* Counter */
+    .counter {font-size:2.5rem;font-weight:bold;color:#ffc107;}
+    .gallery img {transition:transform 0.3s ease;cursor:pointer;}
+    .gallery img:hover {transform:scale(1.05);}
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">
+        <i class="bi bi-gem"></i> RHI
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-center py-5">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold text-warning">Royal Hospitality Institute</h1>
+      <p class="lead mt-3">Empowering Tomorrow’s Hospitality Leaders Today</p>
+      <a href="courses.html" class="btn btn-warning btn-lg mt-4 me-2">Explore Courses</a>
+      <a href="admissions.html" class="btn btn-outline-light btn-lg mt-4">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+         <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" 
+     class="img-fluid rounded shadow" 
+     alt="Royal Hospitality Institute - Hotel Management Training">
+
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-primary section-title mb-3">About Royal Hospitality Institute</h2>
+          <p class="text-muted">
+            RHI is Pakistan’s premier hospitality training institute, dedicated to transforming passion into a successful career.
+            Our modern facilities, expert trainers, and international internships prepare students for global excellence.
+          </p>
+          <ul class="text-muted list-unstyled">
+            <li>✔️ International Accreditation</li>
+            <li>✔️ 5-Star Hotel Partnerships</li>
+            <li>✔️ Global Internship Opportunities</li>
+            <li>✔️ Career-Oriented Curriculum</li>
+          </ul>
+          <a href="about.html" class="btn btn-primary mt-3">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="fw-bold text-primary mb-5 section-title">Why Choose RHI</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <i class="bi bi-mortarboard feature-icon"></i>
+          <h5>Expert Faculty</h5>
+          <p class="small text-muted">Taught by globally experienced professionals.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-building feature-icon"></i>
+          <h5>Modern Infrastructure</h5>
+          <p class="small text-muted">Experience state-of-the-art facilities.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-globe feature-icon"></i>
+          <h5>Global Exposure</h5>
+          <p class="small text-muted">Work with luxury hospitality brands worldwide.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-award feature-icon"></i>
+          <h5>Certified Programs</h5>
+          <p class="small text-muted">Internationally recognized qualifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter -->
+  <section class="py-5 bg-dark text-light text-center">
+    <div class="container">
+      <h2 class="text-warning mb-4 section-title">Our Achievements</h2>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="counter" data-target="1200">1200+</div><p>Graduates</p></div>
+        <div class="col-md-3"><div class="counter" data-target="25">25+</div><p>Professional Trainers</p></div>
+        <div class="col-md-3"><div class="counter" data-target="15">15</div><p>Years of Excellence</p></div>
+        <div class="col-md-3"><div class="counter" data-target="50">50+</div><p>Industry Partners</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="text-primary mb-5 section-title">Popular Courses</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow h-100">
+       <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" 
+     class="img-fluid rounded shadow" 
+     alt="Hotel Management Students Training at Royal Hospitality Institute">
+
+            <div class="card-body">
+              <h5 class="fw-bold">Hotel Management</h5>
+              <p>Comprehensive training in operations, service, and management.</p>
+              <a href="courses.html" class="btn btn-outline-primary">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow h-100">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80" 
+     class="img-fluid rounded shadow" 
+     alt="Culinary Arts Training at Royal Hospitality Institute">
+
+
+            <div class="card-body">
+              <h5 class="fw-bold">Culinary Arts</h5>
+              <p>Learn gourmet cooking with professional chefs and experts.</p>
+              <a href="courses.html" class="btn btn-outline-primary">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow h-100">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" 
+     class="img-fluid rounded shadow" 
+     alt="Luxury Hotel Environment at Royal Hospitality Institute">
+
+            <div class="card-body">
+              <h5 class="fw-bold">Event Management</h5>
+              <p>Master planning, logistics, and execution of luxury events.</p>
+              <a href="courses.html" class="btn btn-outline-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta py-5">
+    <div class="container">
+      <h2 class="fw-bold text-warning mb-3">Join Pakistan’s Leading Hospitality Institute!</h2>
+      <p class="mb-4">Shape your future in hospitality with RHI’s international programs.</p>
+      <a href="admissions.html" class="btn btn-warning btn-lg">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Royal Hospitality Institute</h5>
+          <p class="small">
+            Pakistan’s #1 institute for hotel, culinary, and event management education.
+            Trusted by industry leaders and global brands.
+          </p>
+          <div class="social mt-3">
+            <a href="#"><i class="bi bi-facebook text-light"></i></a>
+            <a href="#"><i class="bi bi-instagram text-light"></i></a>
+            <a href="#"><i class="bi bi-linkedin text-light"></i></a>
+            <a href="#"><i class="bi bi-youtube text-light"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled small">
+            <li><a href="index.html" class="text-light text-decoration-none d-block mb-2">Home</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none d-block mb-2">About</a></li>
+            <li><a href="courses.html" class="text-light text-decoration-none d-block mb-2">Courses</a></li>
+            <li><a href="admissions.html" class="text-light text-decoration-none d-block mb-2">Admissions</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none d-block mb-2">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Contact</h5>
+          <p class="small"><i class="bi bi-geo-alt text-warning"></i> 45-B Shahrah-e-Faisal, Karachi, Pakistan</p>
+          <p class="small"><i class="bi bi-telephone text-warning"></i> +92 300 1234567</p>
+          <p class="small"><i class="bi bi-envelope text-warning"></i> info@rhi.edu.pk</p>
+          <p class="small"><i class="bi bi-clock text-warning"></i> Mon–Sat: 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-4">
+      <div class="text-center small">
+        <p class="mb-0">&copy; 2025 Royal Hospitality Institute. All Rights Reserved. | Developed by 
+        <span class="text-warning">Industry Experts</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admissions | Royal Hospitality Institute</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+  .hero {
+    background: url('https://images.unsplash.com/photo-1600986601319-1d495e58ff70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: white;
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+  }
+  .hero .container {position:relative; z-index:1;}
+  .section-title {font-weight:700; text-transform:uppercase; letter-spacing:1px;}
+  .form-control {transition: all 0.3s ease;}
+  .form-control.valid {border-color:#28a745 !important; box-shadow: 0 0 5px #28a745;}
+  .form-control.invalid {border-color:#dc3545 !important; box-shadow: 0 0 5px #dc3545;}
+  .btn-warning {transition: all 0.3s ease;}
+  .btn-warning:hover {transform: translateY(-2px);}
+</style>
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning" href="index.html">RHI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active text-warning" href="admissions.html">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-warning">Admissions Open 2025</h1>
+    <p class="lead mt-3 text-light">Apply Now & Start Your Journey Towards a Global Hospitality Career</p>
+  </div>
+</section>
+
+<!-- Admission Form -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-primary mb-5 text-center section-title">Apply for Admission</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="admissionForm" class="bg-white p-4 rounded shadow">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label fw-bold">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="03234567892" required>
+          </div>
+          <div class="mb-3">
+            <label for="course" class="form-label fw-bold">Select Course</label>
+            <select class="form-select" id="course" required>
+              <option value="">Choose Course</option>
+              <option>Hotel Management</option>
+              <option>Culinary Arts</option>
+              <option>Event Management</option>
+              <option>Front Office Management</option>
+              <option>Housekeeping Management</option>
+              <option>Hospitality Marketing & Sales</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-bold">Message (Optional)</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Additional Information"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-warning btn-lg">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="successModalLabel"><i class="bi bi-check-circle-fill"></i> Application Submitted!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Thank you for applying to <strong>Royal Hospitality Institute</strong>. Our admissions team will contact you soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="text-warning fw-bold mb-3">Royal Hospitality Institute</h5>
+        <p class="small">Pakistan’s leading institute for hospitality, culinary, and event management education.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-warning fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="text-light text-decoration-none d-block mb-2">Home</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none d-block mb-2">About</a></li>
+          <li><a href="courses.html" class="text-light text-decoration-none d-block mb-2">Courses</a></li>
+          <li><a href="admissions.html" class="text-light text-decoration-none d-block mb-2">Admissions</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none d-block mb-2">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-warning fw-bold mb-3">Contact</h5>
+        <p class="small"><i class="bi bi-geo-alt text-warning"></i> 45-B Shahrah-e-Faisal, Karachi, Pakistan</p>
+        <p class="small"><i class="bi bi-telephone text-warning"></i> +92 300 1234567</p>
+        <p class="small"><i class="bi bi-envelope text-warning"></i> info@rhi.edu.pk</p>
+        <p class="small"><i class="bi bi-clock text-warning"></i> Mon–Sat: 9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <hr class="border-secondary mt-4">
+    <div class="text-center small text-muted">&copy; 2025 Royal Hospitality Institute. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const form = document.getElementById('admissionForm');
+const modal = new bootstrap.Modal(document.getElementById('successModal'));
+
+// Regex Patterns
+const regex = {
+  name: /^[a-zA-Z\s]{3,50}$/,
+  email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  phone: /^03\d{9}$/
+};
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  let valid = true;
+
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const phone = document.getElementById('phone');
+  const course = document.getElementById('course');
+
+  // Name
+  if(!regex.name.test(name.value)){
+    name.classList.add('invalid'); name.classList.remove('valid'); valid=false;
+  } else {name.classList.add('valid'); name.classList.remove('invalid');}
+
+  // Email
+  if(!regex.email.test(email.value)){
+    email.classList.add('invalid'); email.classList.remove('valid'); valid=false;
+  } else {email.classList.add('valid'); email.classList.remove('invalid');}
+
+  // Phone
+  if(!regex.phone.test(phone.value)){
+    phone.classList.add('invalid'); phone.classList.remove('valid'); valid=false;
+  } else {phone.classList.add('valid'); phone.classList.remove('invalid');}
+
+  // Course
+  if(course.value === ""){
+    course.classList.add('invalid'); course.classList.remove('valid'); valid=false;
+  } else {course.classList.add('valid'); course.classList.remove('invalid');}
+
+  if(valid){
+    modal.show();
+    form.reset();
+    document.querySelectorAll('.form-control').forEach(el=>el.classList.remove('valid'));
+  }
+});
+</script>
+</body>
+</html>

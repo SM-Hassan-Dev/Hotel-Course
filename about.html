@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Royal Hospitality Institute</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .about-hero {
+      background: url('https://images.unsplash.com/photo-1542317854-f9596ae5708e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      position: relative;
+      color: white;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+    }
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
+    .about-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .section-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .feature-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 35px;
+      transition: all 0.3s ease;
+    }
+    .feature-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.15);
+    }
+    .leadership img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .leadership img:hover {
+      transform: scale(1.05);
+    }
+    footer a:hover {
+      color: #ffc107 !important;
+    }
+     .leadership-card {
+      background: rgba(255,255,255,0.95);
+      transition: all 0.4s ease;
+    }
+    .leadership-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+    .leadership-img {
+      height: 380px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      opacity: 0;
+      transition: all 0.4s ease;
+      border-radius: 20px;
+    }
+    .leadership-card:hover .overlay {
+      opacity: 1;
+    }
+    .social-icons a {
+      transition: all 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #ffc107 !important;
+      transform: scale(1.2);
+    }
+     /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+    }
+    footer h5 { color: #ffc107; }
+    footer a:hover { color: #ffc107 !important; }
+    footer .social a {
+      display:inline-block;
+      width:36px; height:36px;
+      border-radius:50%;
+      background:#222;
+      line-height:36px;
+      text-align:center;
+      transition:0.3s;
+    }
+    footer .social a:hover { background:#ffc107; color:#000; }
+
+    /* Counter */
+    .counter {font-size:2.5rem;font-weight:bold;color:#ffc107;}
+    .gallery img {transition:transform 0.3s ease;cursor:pointer;}
+    .gallery img:hover {transform:scale(1.05);}
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">RHI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active text-warning" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="about-hero text-center">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold text-warning">About Royal Hospitality Institute</h1>
+      <p class="lead mt-3 text-light">Pioneering Hospitality Excellence Through Education & Innovation</p>
+    </div>
+  </section>
+
+  <!-- About Institute -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" class="img-fluid rounded shadow" alt="RHI Students Training">
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold text-primary mb-3 section-title">Who We Are</h2>
+          <p class="text-muted">
+            Established with a mission to redefine hospitality education in Pakistan, 
+            <strong>Royal Hospitality Institute (RHI)</strong> blends modern academic learning 
+            with real-world hotel training. Our philosophy is simple — 
+            to empower students with international-standard skills and confidence 
+            to thrive in the competitive world of hospitality, tourism, and management.
+          </p>
+          <ul class="text-muted list-unstyled">
+            <li>✔️ ISO Certified Training Programs</li>
+            <li>✔️ 5-Star Industry Partnerships (Serena, PC, Marriott)</li>
+            <li>✔️ Dedicated Internship & Career Placement Division</li>
+            <li>✔️ Experienced Global Faculty & Chefs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold text-primary mb-5 section-title">Our Vision & Mission</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="feature-box h-100">
+            <i class="bi bi-eye text-warning fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-3">Our Vision</h5>
+            <p class="text-muted">
+              To establish RHI as a globally recognized center of hospitality excellence, 
+              nurturing the next generation of industry leaders with ethics, elegance, and expertise.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-box h-100">
+            <i class="bi bi-bullseye text-warning fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-3">Our Mission</h5>
+            <p class="text-muted">
+              To deliver transformative learning experiences through innovation, 
+              creativity, and a commitment to service, equipping students with global skills 
+              and a passion for hospitality excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="py-5 bg-light leadership">
+  <div class="container text-center">
+    <h2 class="fw-bold text-primary mb-5 section-title">Our Leadership</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card leadership-card h-100 p-3 rounded-4 shadow-lg">
+          <div class="position-relative overflow-hidden rounded-4">
+            <img src="Hassan Image.jpg" class="img-fluid leadership-img" alt="CEO RHI">
+            <div class="overlay d-flex justify-content-center align-items-center">
+              <div class="social-icons">
+                <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body mt-3">
+            <h5 class="fw-bold mb-1 text-dark">Syed Hassan Ali</h5>
+            <p class="text-muted small mb-0">Founder & CEO</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card leadership-card h-100 p-3 rounded-4 shadow-lg">
+          <div class="position-relative overflow-hidden rounded-4">
+            <img src="Ali image.jpg" class="img-fluid leadership-img" alt="Academic Director">
+            <div class="overlay d-flex justify-content-center align-items-center">
+              <div class="social-icons">
+                <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body mt-3">
+            <h5 class="fw-bold mb-1 text-dark">Ms. Hira Malik</h5>
+            <p class="text-muted small mb-0">Academic Director</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card leadership-card h-100 p-3 rounded-4 shadow-lg">
+          <div class="position-relative overflow-hidden rounded-4">
+            <img src="Ahsan Image.jpg" class="img-fluid leadership-img" alt="Head of Culinary Programs">
+            <div class="overlay d-flex justify-content-center align-items-center">
+              <div class="social-icons">
+                <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body mt-3">
+            <h5 class="fw-bold mb-1 text-dark">Chef Rehan Siddiqui</h5>
+            <p class="text-muted small mb-0">Head of Culinary Programs</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Facilities -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold text-primary mb-5 section-title">Our Facilities</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-building text-warning fs-1 mb-3"></i>
+            <h5>Modern Campus</h5>
+            <p class="text-muted small">Smart classrooms, training hotels, and fully equipped demonstration kitchens.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-cup-hot text-warning fs-1 mb-3"></i>
+            <h5>Hospitality Labs</h5>
+            <p class="text-muted small">Hands-on barista, front-office, and event management labs for real-world learning.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-briefcase text-warning fs-1 mb-3"></i>
+            <h5>Career Development</h5>
+            <p class="text-muted small">100% internship placement with top-tier hotels and resorts worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 text-center bg-dark text-light">
+    <div class="container">
+      <h2 class="fw-bold text-warning mb-3">Join the Future of Hospitality Education</h2>
+      <p class="mb-4">Experience global-standard learning right here in Pakistan with Royal Hospitality Institute.</p>
+      <a href="admissions.html" class="btn btn-warning btn-lg">Apply for Admission</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+ <footer class="pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Royal Hospitality Institute</h5>
+          <p class="small">
+            Pakistan’s #1 institute for hotel, culinary, and event management education.
+            Trusted by industry leaders and global brands.
+          </p>
+          <div class="social mt-3">
+            <a href="#"><i class="bi bi-facebook text-light"></i></a>
+            <a href="#"><i class="bi bi-instagram text-light"></i></a>
+            <a href="#"><i class="bi bi-linkedin text-light"></i></a>
+            <a href="#"><i class="bi bi-youtube text-light"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled small">
+            <li><a href="index.html" class="text-light text-decoration-none d-block mb-2">Home</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none d-block mb-2">About</a></li>
+            <li><a href="courses.html" class="text-light text-decoration-none d-block mb-2">Courses</a></li>
+            <li><a href="admissions.html" class="text-light text-decoration-none d-block mb-2">Admissions</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none d-block mb-2">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Contact</h5>
+          <p class="small"><i class="bi bi-geo-alt text-warning"></i> 45-B Shahrah-e-Faisal, Karachi, Pakistan</p>
+          <p class="small"><i class="bi bi-telephone text-warning"></i> +92 300 1234567</p>
+          <p class="small"><i class="bi bi-envelope text-warning"></i> info@rhi.edu.pk</p>
+          <p class="small"><i class="bi bi-clock text-warning"></i> Mon–Sat: 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-4">
+      <div class="text-center small">
+        <p class="mb-0">&copy; 2025 Royal Hospitality Institute. All Rights Reserved. | Developed by 
+        <span class="text-warning">Industry Experts</span></p>
+      </div>
+    </div>
+  </footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- Scroll To Top Script -->
+<script>
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) scrollBtn.style.display = 'block';
+    else scrollBtn.style.display = 'none';
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
